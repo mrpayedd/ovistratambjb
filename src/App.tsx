@@ -115,89 +115,96 @@ const Hero = () => (
 const Education = () => (
   <section className="py-24 px-4 bg-white">
     <div className="max-w-6xl mx-auto">
-      <SectionHeading 
+      <SectionHeading
         title="Macam Mana OVISTRATA Berfungsi?"
-        subtitle="Sistem pencegahan awal denggi – hanya 3 langkah praktikal."
+        subtitle="3 langkah ringkas — pasang, pantau, dan bertindak sebelum denggi merebak."
       />
 
-      <div className="grid md:grid-cols-3 gap-12">
-
-        {/* STEP 1 */}
-        <div className="text-center">
-          <div className="mb-6 overflow-hidden rounded-2xl shadow-lg border">
-            <img
-              src="/images/rumah-flat.jpg"
-              alt="Kawasan strata perumahan"
-              className="w-full h-56 object-cover"
-            />
+      <div className="grid md:grid-cols-3 gap-8">
+        {/* Step 1 */}
+        <div className="group rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm hover:shadow-xl transition">
+          <div className="flex items-center justify-between mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl font-black">
+              1
+            </div>
+            <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <MapPin className="w-6 h-6 text-blue-700" />
+            </div>
           </div>
 
-          <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-            1
-          </div>
-
-          <h3 className="text-2xl font-bold mb-3">
-            Kenal Pasti Kawasan Berisiko
+          <h3 className="text-2xl font-extrabold text-slate-900 mb-3">
+            Letak di Spot Strategik
           </h3>
-
-          <p className="text-slate-600">
-            Kawasan strata mempunyai banyak sudut tersembunyi dan takungan air
-            yang menjadi tempat pembiakan nyamuk Aedes tanpa disedari.
+          <p className="text-slate-600 leading-relaxed">
+            Pasang unit di kawasan strata yang berisiko (koridor, tangga, belakang bangunan,
+            tempat lembap & terlindung).
           </p>
+
+          <div className="mt-6 text-sm text-slate-500">
+            ✅ Mudah • ✅ Cepat • ✅ Tak ganggu penduduk
+          </div>
         </div>
 
-        {/* STEP 2 */}
-        <div className="text-center">
-          <div className="mb-6 overflow-hidden rounded-2xl shadow-lg border">
-            <img
-              src="/images/ovistrata-unit.png"
-              alt="Unit OVISTRATA MBJB"
-              className="w-full h-56 object-contain bg-gray-50 p-4"
-            />
+        {/* Step 2 */}
+        <div className="group rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm hover:shadow-xl transition">
+          <div className="flex items-center justify-between mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl font-black">
+              2
+            </div>
+            <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <FileText className="w-6 h-6 text-blue-700" />
+            </div>
           </div>
 
-          <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-            2
-          </div>
-
-          <h3 className="text-2xl font-bold mb-3">
-            Pasang Unit OVISTRATA
+          <h3 className="text-2xl font-extrabold text-slate-900 mb-3">
+            Pantau Egg Strip
           </h3>
-
-          <p className="text-slate-600">
-            Unit ovitrap dipasang di lokasi strategik untuk menarik nyamuk Aedes
-            bertelur dan membolehkan pemantauan pembiakan dilakukan.
+          <p className="text-slate-600 leading-relaxed">
+            Semak mingguan. Telur yang dikesan pada egg strip jadi “signal awal”
+            kawasan sedang aktif pembiakan Aedes.
           </p>
+
+          <div className="mt-6 text-sm text-slate-500">
+            ✅ Data jelas • ✅ Konsisten • ✅ Mudah direkod
+          </div>
         </div>
 
-        {/* STEP 3 */}
-        <div className="text-center">
-          <div className="mb-6 overflow-hidden rounded-2xl shadow-lg border">
-            <img
-              src="/images/rumah-flat.jpg"
-              alt="Pemantauan kawasan strata"
-              className="w-full h-56 object-cover"
-            />
+        {/* Step 3 */}
+        <div className="group rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm hover:shadow-xl transition">
+          <div className="flex items-center justify-between mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl font-black">
+              3
+            </div>
+            <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <Zap className="w-6 h-6 text-blue-700" />
+            </div>
           </div>
 
-          <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-            3
-          </div>
-
-          <h3 className="text-2xl font-bold mb-3">
-            Pantau & Ambil Tindakan
+          <h3 className="text-2xl font-extrabold text-slate-900 mb-3">
+            Tindakan Fokus (Surgical)
           </h3>
-
-          <p className="text-slate-600">
-            Data daripada ovitrap membantu pihak pengurusan dan kesihatan
-            bertindak lebih awal sebelum wabak denggi berlaku.
+          <p className="text-slate-600 leading-relaxed">
+            Bila data menunjukkan “hotspot”, pasukan boleh buat tindakan target:
+            cari punca takungan, bersih, dan kawal lebih tepat.
           </p>
-        </div>
 
+          <div className="mt-6 text-sm text-slate-500">
+            ✅ Lebih efektif • ✅ Kurang pembaziran • ✅ Kurang fogging
+          </div>
+        </div>
+      </div>
+
+      {/* CTA bawah education */}
+      <div className="mt-14 flex flex-col items-center gap-4">
+        <div className="text-slate-600 text-center max-w-2xl">
+          Lagi cepat anda mula pemantauan, lagi awal anda boleh cegah kes.
+        </div>
+        <CTAButton text="Mohon OVISTRATA Sekarang" className="mx-auto" />
       </div>
     </div>
   </section>
 );
+
 
 
 
