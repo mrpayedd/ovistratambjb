@@ -448,35 +448,128 @@ const ProductIntroduction = () => (
 
 const ValueStack = () => (
   <section className="py-24 px-4 bg-gray-50 border-y border-gray-200">
-    <div className="max-w-4xl mx-auto">
-      <SectionHeading title="Apa Yang Anda Dapat?" subtitle="Pakej lengkap untuk permulaan pantas." />
-      <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
-        <div className="p-8 md:p-12 space-y-6">
-          {[
-            { title: "Unit Ovitrap Strata", desc: "Perangkap khas nyamuk Aedes", value: "RM80" },
-            { title: "Egg Strip Pemantauan", desc: "Media pengesanan telur berkualiti", value: "RM40" },
-            { title: "Reka Bentuk Berlapis", desc: "Pisahkan ovitrap & pelupusan dengan selamat", value: "RM60" },
-            { title: "Bekas Puntung Rokok Tahan Haba", desc: "Kebersihan terjamin di kawasan perokok", value: "RM30" },
-            { title: "Manual Operasi Ringkas", desc: "Panduan penggunaan langkah demi langkah", value: "RM20" },
-            { title: "Sistem Mudah Replikasi", desc: "Boleh diperluas ke lokasi lain dengan kos minima", value: "RM50" }
-          ].map((item, i) => (
-            <div key={i} className="flex justify-between items-center gap-4 border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+    <div className="max-w-5xl mx-auto">
+      <SectionHeading
+        title="Pakej OVISTRATA MBJB (Siap Sedia Untuk Digunakan)"
+        subtitle="Semua yang diperlukan untuk mula pemantauan & tindakan awal — tanpa pening kepala."
+      />
+
+      <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+
+        {/* LEFT: WHAT YOU GET */}
+        <div className="lg:col-span-2 bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+          <div className="p-8 md:p-12">
+            <div className="flex items-center justify-between gap-6 mb-8">
               <div>
-                <div className="font-bold text-xl text-slate-900">{item.title}</div>
-                <div className="text-slate-500 text-sm">{item.desc}</div>
+                <div className="text-blue-700 font-extrabold uppercase tracking-widest text-xs">
+                  Kandungan Pakej
+                </div>
+                <h3 className="text-3xl font-black text-slate-900 mt-2">
+                  Apa Yang Anda Terima
+                </h3>
               </div>
-              <div className="font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-lg shrink-0">Value: {item.value}</div>
+              <div className="hidden md:block text-right">
+                <div className="text-slate-500 uppercase tracking-widest text-xs font-bold">
+                  Jumlah Nilai
+                </div>
+                <div className="text-3xl font-black text-slate-900">RM330+</div>
+              </div>
             </div>
-          ))}
+
+            <div className="space-y-5">
+              {[
+                { title: "Unit Ovitrap Strata (Body Utama)", desc: "Reka bentuk sesuai kawasan bertingkat", value: "RM80" },
+                { title: "Egg Strip Pemantauan", desc: "Media pengesanan telur (mudah diganti)", value: "RM40" },
+                { title: "Reka Bentuk Berlapis & Selamat", desc: "Mengurangkan risiko tumpahan / gangguan", value: "RM60" },
+                { title: "Bekas Puntung Rokok Tahan Haba", desc: "Kekal bersih untuk kawasan perokok", value: "RM30" },
+                { title: "Manual Operasi Ringkas", desc: "SOP semakan & rekod pemantauan", value: "RM20" },
+                { title: "Sistem Mudah Replikasi", desc: "Boleh diperluas ikut blok/kawasan", value: "RM50" }
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border border-slate-100 rounded-2xl p-5 hover:shadow-md transition"
+                >
+                  <div>
+                    <div className="font-extrabold text-lg text-slate-900">{item.title}</div>
+                    <div className="text-slate-500 text-sm mt-1">{item.desc}</div>
+                  </div>
+
+                  <div className="font-black text-blue-700 bg-blue-50 px-4 py-2 rounded-xl w-fit shrink-0">
+                    Nilai: {item.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 p-6 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div>
+                <div className="uppercase tracking-widest text-xs font-bold text-slate-300">
+                  Jumlah Nilai Sebenar (Jika Asing)
+                </div>
+                <div className="text-3xl font-black">RM330.00+</div>
+              </div>
+              <div className="text-slate-200 text-sm max-w-md">
+                Direka untuk pelaksanaan komuniti: lebih cepat bermula, lebih mudah dipantau,
+                dan senang diperluaskan ke kawasan lain.
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="bg-blue-600 p-8 text-center text-white">
-          <div className="text-xl uppercase tracking-widest font-bold opacity-80">JUMLAH NILAI SEBENAR</div>
-          <div className="text-5xl font-black mt-2">RM330.00+</div>
+
+        {/* RIGHT: PRICE CARD */}
+        <div className="bg-white rounded-3xl shadow-xl border-2 border-red-200 overflow-hidden flex flex-col">
+          <div className="p-8">
+            <div className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full font-extrabold text-xs uppercase tracking-widest">
+              Tawaran Komuniti
+            </div>
+
+            <h3 className="text-2xl font-black text-slate-900 mt-6">
+              Harga Pelaksanaan
+            </h3>
+
+            <div className="mt-5">
+              <div className="text-slate-500 font-bold line-through text-2xl">RM330+</div>
+              <div className="text-red-600 text-6xl font-black leading-none mt-1">RM100</div>
+              <div className="text-slate-900 font-extrabold uppercase tracking-widest mt-2">
+                Sahaja per unit
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-3 text-slate-700 font-semibold">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />
+                Sesuai untuk PBT / JMB / Komuniti
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />
+                Mudah pasang & semak (mingguan)
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />
+                Boleh scale ikut blok & kawasan
+              </div>
+            </div>
+
+            <CTAButton text="Mohon / Tempah Pakej Ini" className="w-full mt-8" />
+
+            <div className="text-xs text-slate-500 mt-4">
+              *Cadangan: mulakan 10–30 unit untuk satu kawasan strata (bergantung blok & kepadatan).
+            </div>
+          </div>
+
+          <div className="mt-auto bg-gray-50 border-t border-gray-200 p-6">
+            <div className="text-slate-700 font-bold mb-2">Nak lebih “official”?</div>
+            <div className="text-slate-600 text-sm">
+              Boleh tambah: jadual pemantauan, template laporan, & pelan pemasangan ikut blok.
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 );
+
 
 const Bonuses = () => (
   <section className="py-24 px-4 bg-white">
