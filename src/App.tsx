@@ -73,6 +73,15 @@ const Hero = () => (
           className="rounded-xl w-full object-cover shadow-inner h-[300px] md:h-[450px]"
         />
       </div>
+      
+      <div className="w-full max-w-3xl bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 mb-12 shadow-2xl">
+  <img
+    src="/images/ovistrata-unit.png"
+    alt="Unit OVISTRATA MBJB"
+    className="rounded-xl w-full object-contain bg-white/80 h-[320px] md:h-[420px] p-6"
+  />
+</div>
+
 
       {/* Feature bullets */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl">
