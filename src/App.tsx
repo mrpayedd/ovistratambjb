@@ -393,26 +393,58 @@ const USPSection = () => (
 const ProductIntroduction = () => (
   <section className="py-24 px-4 bg-white">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+
+      {/* LEFT CONTENT */}
       <div className="md:w-1/2">
-        <h4 className="text-blue-600 font-bold uppercase tracking-widest mb-2">Memperkenalkan...</h4>
-        <h2 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 leading-tight">OVISTRATA MBJB</h2>
+        <h4 className="text-blue-600 font-bold uppercase tracking-widest mb-2">
+          Memperkenalkan Sistem Rasmi
+        </h4>
+
+        <h2 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 leading-tight">
+          OVISTRATA MBJB
+        </h2>
+
         <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-          Sistem ovitrap strata yang direka khusus untuk kawalan pembiakan nyamuk Aedes secara pencegahan awal. Bukan sekadar perangkap, ianya sistem pengurusan kesihatan komuniti.
+          OVISTRATA MBJB ialah sistem ovitrap strata yang direka khusus untuk
+          kegunaan kawasan perumahan bertingkat bagi kawalan pembiakan nyamuk
+          Aedes secara pencegahan awal.
+          <br /><br />
+          Ia bukan sekadar perangkap, tetapi satu pendekatan pengurusan kesihatan
+          komuniti yang praktikal, kos efektif dan mudah dilaksanakan.
         </p>
+
         <ul className="space-y-4 mb-10">
-          {["Sesuai kawasan bertingkat", "Mudah dipasang", "Selamat & bersih", "Kos rendah", "Mudah diperluas"].map((li, i) => (
-            <li key={i} className="flex items-center gap-3 font-bold text-lg text-slate-800">
-              <PlusCircle className="text-blue-600" /> {li}
+          {[
+            "Direka khas untuk kawasan strata & perumahan bertingkat",
+            "Pemasangan mudah tanpa elektrik atau bahan kimia",
+            "Selamat, bersih dan tidak mengganggu penduduk",
+            "Kos rendah untuk pelaksanaan berskala besar",
+            "Mudah diperluaskan ke blok atau kawasan lain"
+          ].map((li, i) => (
+            <li
+              key={i}
+              className="flex items-center gap-3 font-bold text-lg text-slate-800"
+            >
+              <PlusCircle className="text-blue-600 shrink-0" />
+              {li}
             </li>
           ))}
         </ul>
       </div>
-      <div className="md:w-1/2 rounded-3xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/productintro/800/1000" alt="Product" />
+
+      {/* RIGHT IMAGE */}
+      <div className="md:w-1/2 rounded-3xl overflow-hidden shadow-2xl bg-gray-50 p-8">
+        <img
+          src="/images/ovistrata-unit.png"
+          alt="Unit Ovistrata MBJB"
+          className="w-full h-[500px] object-contain"
+        />
       </div>
+
     </div>
   </section>
 );
+
 
 const ValueStack = () => (
   <section className="py-24 px-4 bg-gray-50 border-y border-gray-200">
