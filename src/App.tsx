@@ -116,73 +116,89 @@ const Education = () => (
   <section className="py-24 px-4 bg-white">
     <div className="max-w-6xl mx-auto">
       <SectionHeading 
-        title="Bagaimana OVISTRATA Berfungsi?"
-        subtitle="3 langkah mudah untuk kawal pembiakan Aedes sebelum denggi merebak"
+        title="Macam Mana OVISTRATA Berfungsi?"
+        subtitle="Sistem pencegahan awal denggi – hanya 3 langkah praktikal."
       />
 
-      <div className="grid md:grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-3 gap-12">
 
         {/* STEP 1 */}
-        <div className="relative bg-gray-50 rounded-3xl overflow-hidden shadow-lg group">
-          <img
-            src="/images/rumah-flat.jpg"
-            alt="Kawasan Strata"
-            className="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
-          />
-          <div className="absolute top-4 left-4 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-black">
+        <div className="text-center">
+          <div className="mb-6 overflow-hidden rounded-2xl shadow-lg border">
+            <img
+              src="/images/rumah-flat.jpg"
+              alt="Kawasan strata perumahan"
+              className="w-full h-56 object-cover"
+            />
+          </div>
+
+          <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
             1
           </div>
-          <div className="p-6">
-            <h3 className="text-2xl font-bold mb-3">Kenal Pasti Kawasan Risiko</h3>
-            <p className="text-slate-600">
-              Kawasan strata seperti rumah flat dan apartmen mempunyai banyak sudut berisiko
-              pembiakan nyamuk Aedes yang sukar dipantau secara manual.
-            </p>
-          </div>
+
+          <h3 className="text-2xl font-bold mb-3">
+            Kenal Pasti Kawasan Berisiko
+          </h3>
+
+          <p className="text-slate-600">
+            Kawasan strata mempunyai banyak sudut tersembunyi dan takungan air
+            yang menjadi tempat pembiakan nyamuk Aedes tanpa disedari.
+          </p>
         </div>
 
         {/* STEP 2 */}
-        <div className="relative bg-gray-50 rounded-3xl overflow-hidden shadow-lg group">
-          <img
-            src="/images/ovistrata-unit.png"
-            alt="Unit Ovistrata"
-            className="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
-          />
-          <div className="absolute top-4 left-4 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-black">
+        <div className="text-center">
+          <div className="mb-6 overflow-hidden rounded-2xl shadow-lg border">
+            <img
+              src="/images/ovistrata-unit.png"
+              alt="Unit OVISTRATA MBJB"
+              className="w-full h-56 object-contain bg-gray-50 p-4"
+            />
+          </div>
+
+          <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
             2
           </div>
-          <div className="p-6">
-            <h3 className="text-2xl font-bold mb-3">Pasang Unit OVISTRATA</h3>
-            <p className="text-slate-600">
-              Unit ovitrap dipasang di lokasi strategik untuk menarik nyamuk Aedes
-              bertelur secara semula jadi tanpa bahan kimia.
-            </p>
-          </div>
+
+          <h3 className="text-2xl font-bold mb-3">
+            Pasang Unit OVISTRATA
+          </h3>
+
+          <p className="text-slate-600">
+            Unit ovitrap dipasang di lokasi strategik untuk menarik nyamuk Aedes
+            bertelur dan membolehkan pemantauan pembiakan dilakukan.
+          </p>
         </div>
 
         {/* STEP 3 */}
-        <div className="relative bg-gray-50 rounded-3xl overflow-hidden shadow-lg group">
-          <img
-            src="/images/ovistrata-unit.png"
-            alt="Pemantauan Data"
-            className="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
-          />
-          <div className="absolute top-4 left-4 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-black">
+        <div className="text-center">
+          <div className="mb-6 overflow-hidden rounded-2xl shadow-lg border">
+            <img
+              src="/images/rumah-flat.jpg"
+              alt="Pemantauan kawasan strata"
+              className="w-full h-56 object-cover"
+            />
+          </div>
+
+          <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
             3
           </div>
-          <div className="p-6">
-            <h3 className="text-2xl font-bold mb-3">Pantau & Bertindak Awal</h3>
-            <p className="text-slate-600">
-              Data telur nyamuk direkod secara berkala untuk tindakan kawalan awal
-              sebelum kes denggi meningkat.
-            </p>
-          </div>
+
+          <h3 className="text-2xl font-bold mb-3">
+            Pantau & Ambil Tindakan
+          </h3>
+
+          <p className="text-slate-600">
+            Data daripada ovitrap membantu pihak pengurusan dan kesihatan
+            bertindak lebih awal sebelum wabak denggi berlaku.
+          </p>
         </div>
 
       </div>
     </div>
   </section>
 );
+
 
 
 const ProofSection = () => (
