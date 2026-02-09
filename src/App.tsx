@@ -201,7 +201,12 @@ const ProofSection = () => (
           </div>
         </div>
         <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-          <img src="https://picsum.photos/seed/result/800/600" alt="Result proof" className="w-full" />
+         <img
+  src="/images/ovistrata-unit.png"
+  alt="Unit OVISTRATA MBJB"
+  className="w-full h-full object-contain bg-white p-8"
+/>
+
         </div>
       </div>
     </div>
