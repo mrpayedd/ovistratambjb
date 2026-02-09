@@ -35,41 +35,36 @@ const CTAButton: React.FC<{
   variant?: "primary" | "secondary";
 }> = ({ text, href, onClick, className, variant = "primary" }) => {
   const base =
-    "font-extrabold py-4 px-8 rounded-full shadow-2xl transform transition hover:scale-105 active:scale-95 text-xl md:text-2xl uppercase tracking-wider flex items-center justify-center gap-3 w-full";
+    "font-extrabold py-4 px-8 rounded-full shadow-2xl transform transition hover:scale-105 active:scale-95 text-xl md:text-2xl uppercase tracking-wider flex items-center justify-center gap-3";
   const styles =
     variant === "primary"
       ? "bg-red-600 hover:bg-red-700 text-white"
       : "bg-white/10 hover:bg-white/20 text-white border border-white/30";
 
-  const content = (
-    <>
-      {text}
-      <ArrowRight className="w-6 h-6" />
-    </>
-  );
-
+  // 👉 Kalau ada href (WhatsApp), guna <a>
   if (href) {
     return (
       <a
         href={href}
         target="_blank"
         rel="noreferrer"
-        className={`${base} ${styles} ${className ?? ""}`}
+        className={`${base} ${styles} ${className}`}
       >
-        {content}
+        {text}
+        <ArrowRight className="w-6 h-6" />
       </a>
     );
   }
 
+  // 👉 Kalau tak ada href, fallback ke button biasa
   return (
-    <button
-      onClick={onClick}
-      className={`${base} ${styles} ${className ?? ""}`}
-    >
-      {content}
+    <button onClick={onClick} className={`${base} ${styles} ${className}`}>
+      {text}
+      <ArrowRight className="w-6 h-6" />
     </button>
   );
 };
+
 
 const SectionHeading: React.FC<{
   title: string;
