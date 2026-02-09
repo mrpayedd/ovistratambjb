@@ -50,7 +50,6 @@ const Hero = () => (
     <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-500/20 rounded-full blur-3xl" />
 
     <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
-
       {/* Trust Badge */}
       <div className="bg-blue-600/30 text-blue-100 px-4 py-1 rounded-full text-sm font-semibold mb-6 border border-blue-300/30">
         ✅ Sistem Pencegahan Awal Denggi Untuk Kawasan Strata
@@ -62,8 +61,46 @@ const Hero = () => (
       </h1>
 
       {/* Subheadline */}
-      <p className="text-xl md:text-3xl font-medium text-blue-100 mb-6 max-w-4xl">
-        Pasa
+      <p className="text-xl md:text-3xl font-medium text-blue-100 mb-10 max-w-4xl">
+        Pasang unit ovitrap, pantau egg strip, dan bertindak awal — sebelum kes denggi merebak dalam komuniti anda.
+      </p>
+
+      {/* Image */}
+      <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 mb-12 shadow-2xl">
+        <img
+          src="/images/rumah-flat.jpg"
+          alt="Kawasan Rumah Flat / Pangsapuri Strata"
+          className="rounded-xl w-full object-cover shadow-inner h-[300px] md:h-[450px]"
+        />
+      </div>
+
+      {/* Feature bullets */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl">
+        {[
+          "Direka khas kawasan strata",
+          "Fokus pencegahan awal denggi",
+          "Kos sangat rendah & praktikal",
+          "Mudah dipasang & dipantau",
+          "Tidak ganggu persekitaran",
+        ].map((feat, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-2 bg-white/5 p-4 rounded-lg border border-white/10 text-left"
+          >
+            <CheckCircle className="text-yellow-400 shrink-0" />
+            <span className="font-semibold">{feat}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="mt-12">
+        <CTAButton text="Mohon OVISTRATA Sekarang" />
+      </div>
+    </div>
+  </section>
+);
+
 
 
 const Education = () => (
