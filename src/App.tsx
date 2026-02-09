@@ -46,42 +46,25 @@ const TopHeader = () => (
 
 const Hero = () => (
   <section className="relative bg-gradient-primary text-white pt-20 pb-24 px-4 overflow-hidden">
+    <div className="absolute -top-24 -right-24 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl" />
+    <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-500/20 rounded-full blur-3xl" />
+
     <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
-      <div className="bg-blue-600/30 text-blue-200 px-4 py-1 rounded-full text-sm font-semibold mb-6 border border-blue-400/30">
-        SOLUSI PENCEGAHAN AWAL DENGGI #1
+
+      {/* Trust Badge */}
+      <div className="bg-blue-600/30 text-blue-100 px-4 py-1 rounded-full text-sm font-semibold mb-6 border border-blue-300/30">
+        ✅ Sistem Pencegahan Awal Denggi Untuk Kawasan Strata
       </div>
-      <h1 className="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
+
+      {/* Headline */}
+      <h1 className="text-4xl md:text-7xl font-extrabold mb-5 leading-tight">
         OVISTRATA <span className="text-yellow-400">MBJB</span>
       </h1>
-      <p className="text-xl md:text-3xl font-medium text-blue-100 mb-10 max-w-4xl">
-        Sistem Ovitrap Strata Praktikal Untuk Kawalan Pembiakan Nyamuk Aedes Sebelum Denggi Merebak
-      </p>
-      
-     <div className="w-full max-w-3xl bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 mb-12 shadow-2xl">
-  <img
-    src="/images/ovistrata-unit.png"
-    alt="Unit OVISTRATA MBJB"
-    className="rounded-xl w-full object-contain bg-white/80 h-[320px] md:h-[420px] p-6"
-  />
-</div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl">
-        {[
-          "Direka khas kawasan strata",
-          "Fokus pencegahan awal denggi",
-          "Kos sangat rendah & praktikal",
-          "Mudah dipasang & dipantau",
-          "Tidak ganggu persekitaran"
-        ].map((feat, i) => (
-          <div key={i} className="flex items-center gap-2 bg-white/5 p-4 rounded-lg border border-white/10 text-left">
-            <CheckCircle className="text-yellow-400 shrink-0" />
-            <span className="font-semibold">{feat}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+      {/* Subheadline */}
+      <p className="text-xl md:text-3xl font-medium text-blue-100 mb-6 max-w-4xl">
+        Pasa
+
 
 const Education = () => (
   <section className="py-24 px-4 bg-white">
