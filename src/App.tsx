@@ -204,30 +204,91 @@ const Education = () => (
 const ProofSection = () => (
   <section className="py-24 px-4 bg-slate-900 text-white">
     <div className="max-w-6xl mx-auto">
-      <SectionHeading title="Keputusan Yang Jelas" subtitle="Bandingkan sendiri sebelum dan selepas guna sistem ini." dark />
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+      <SectionHeading
+        title="Keputusan Yang Jelas"
+        subtitle="Bezakan kawalan biasa vs pemantauan awal guna OVISTRATA."
+        dark
+      />
+
+      {/* Quick stats */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        {[
+          { t: "Tindakan awal", d: "Nampak risiko sebelum kes naik" },
+          { t: "Pemantauan konsisten", d: "Data mingguan egg strip" },
+          { t: "Tindakan fokus", d: "Buat kerja di lokasi tepat" },
+        ].map((x, i) => (
+          <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div className="text-xl font-extrabold text-yellow-300">{x.t}</div>
+            <div className="text-slate-300 mt-2">{x.d}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        {/* Before / After cards */}
         <div className="space-y-6">
           <div className="bg-white/10 p-8 rounded-2xl border-l-8 border-red-500">
-            <h4 className="text-2xl font-bold mb-2 text-red-400 uppercase tracking-widest">SEBELUM</h4>
-            <p className="text-lg text-slate-300 italic">"Kawasan strata sukar dipantau, pembiakan nyamuk tidak disedari. Kita selalu lambat bertindak bila dah ada kes."</p>
+            <h4 className="text-2xl font-black mb-2 text-red-300 uppercase tracking-widest">
+              Sebelum
+            </h4>
+            <p className="text-lg text-slate-200 italic leading-relaxed">
+              “Kawasan strata sukar dipantau. Pembiakan nyamuk berlaku tanpa disedari,
+              dan tindakan selalunya lambat bila kes dah naik.”
+            </p>
+            <div className="mt-4 text-sm text-slate-300">
+              ✅ Banyak spot tersembunyi • ❌ Tiada data tetap
+            </div>
           </div>
+
           <div className="bg-white/10 p-8 rounded-2xl border-l-8 border-green-500">
-            <h4 className="text-2xl font-bold mb-2 text-green-400 uppercase tracking-widest">SELEPAS</h4>
-            <p className="text-lg text-slate-300 italic">"Kawalan awal, pemantauan konsisten dan tindakan lebih tersusun. Data membantu kita nampak kat mana punca masalah."</p>
+            <h4 className="text-2xl font-black mb-2 text-green-300 uppercase tracking-widest">
+              Selepas
+            </h4>
+            <p className="text-lg text-slate-200 italic leading-relaxed">
+              “Dengan ovitrap dan rekod pemantauan, kita nampak kawasan berisiko lebih awal.
+              Tindakan jadi tersusun dan lebih berkesan.”
+            </p>
+            <div className="mt-4 text-sm text-slate-300">
+              ✅ Ada data egg strip • ✅ Tindakan lebih fokus
+            </div>
           </div>
         </div>
-        <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-         <img
-  src="/images/ovistrata-unit.png"
-  alt="Unit OVISTRATA MBJB"
-  className="w-full h-full object-contain bg-white p-8"
-/>
 
+        {/* Image panel (guna gambar public/images) */}
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white/5">
+          <div className="p-4">
+            <div className="text-sm font-bold text-slate-200 mb-3">
+              Visual kawasan & unit OVISTRATA
+            </div>
+
+            <div className="grid gap-4">
+              <div className="rounded-2xl overflow-hidden border border-white/10">
+                <img
+                  src="/images/rumah-flat.jpg"
+                  alt="Kawasan strata"
+                  className="w-full h-[240px] object-cover"
+                />
+              </div>
+
+              <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/80">
+                <img
+                  src="/images/ovistrata-unit.png"
+                  alt="Unit OVISTRATA MBJB"
+                  className="w-full h-[240px] object-contain p-6"
+                />
+              </div>
+            </div>
+
+            <div className="mt-5">
+              <CTAButton text="Mohon OVISTRATA Untuk Kawasan Anda" className="w-full" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 );
+
 
 const ProblemSection = () => (
   <section className="py-24 px-4 bg-gray-50">
